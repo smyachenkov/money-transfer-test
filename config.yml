@@ -1,0 +1,10 @@
+name: Transfer
+
+server:
+  type: default
+  maxThreads: 1024
+
+database:
+  user: transfer
+  password: transfer
+  url: jdbc:h2:mem:transfer;DB_CLOSE_DELAY=-1
