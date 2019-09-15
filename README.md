@@ -1,4 +1,4 @@
-#Requirements
+# Requirements
 
 Design and implement a RESTful API (including data model and the backing implementation) for
 money transfers between accounts.
@@ -19,14 +19,14 @@ Implicit requirements:
 2. There are no detailed requirements, use common sense.
 Please put your work on github or bitbucket.
 
-#How to build an run
+# How to build and run
 
 It's a maven project and can be build with the `mvn package` command.
 
 To run this application, execute command `java -jar transfer-1.0.jar server config.yml`.  
 Note that the configuration file config.yml must be present.
 
-#API Overview
+# API Overview
 
 **GET     /account/list**  
 Retrieve all accounts.
@@ -82,8 +82,8 @@ Response example:
 ```
 Or 404 if account with such number is not found.
 
-**POST    /account**
-Create new account.
+**POST    /account**  
+Create new account.  
 Body example:  
 ```json
 {
@@ -95,6 +95,7 @@ Body example:
 
 **POST    /transfer**  
 Request transfer between 2 accounts.  
+Body example:
 ```json
 {
 	"from": 1,
@@ -122,7 +123,8 @@ Or error status with description, for example:
 
 Frameworks and libraries:
 
-* [Dropwizard](https://www.dropwizard.io/)
+* [Dropwizard](https://www.dropwizard.io/)  
+Java framework for RESTful web services development. 
 
 * [jOOQ](https://www.jooq.org/)  
 SQL query generator and transaction manager.
@@ -130,12 +132,12 @@ SQL query generator and transaction manager.
 * [HikariCP](https://github.com/brettwooldridge/HikariCP)  
 Lightweight connection pool.
 
-* [H2](http://www.h2database.com/)
+* [H2](http://www.h2database.com/)  
 SQL database. It can be run as embedded and in-memory db.   
 For the sake of this test it is used only in in-memory mode.
 
-* [kotlin-logging](https://github.com/MicroUtils/kotlin-logging)
+* [kotlin-logging](https://github.com/MicroUtils/kotlin-logging)  
 Lightweight logging framework for Kotlin.
 
-* [Flyway](https://flywaydb.org/)
+* [Flyway](https://flywaydb.org/)  
 Version control for SQL database.
