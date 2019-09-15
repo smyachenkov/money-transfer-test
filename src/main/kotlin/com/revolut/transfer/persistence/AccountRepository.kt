@@ -17,7 +17,7 @@ class AccountRepository(private val dslContext: DSLContext) {
     fun createAccount(account: AccountRequest) {
         dslContext.insertInto(table("account"),
                 field("account_number"), field("name"), field("balance"))
-                .values(account.name, account.accountNumber, account.balance)
+                .values(account.accountNumber, account.name, account.balance)
                 .execute()
 
     }
